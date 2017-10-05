@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>CRUD App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <form role="form">
+                    <h4><span class="glyphicon glyphicon-asterisk"></span>Require to fill out</h4>
+                    <div class="form-group">
+                        <label>Search Options</label>
+                        <div class="input-group">
+                            <input id="search_input" type="text" class="form-control">
+                            <span class="input-group-btn">
+                          <select id="column_name" class="btn">
+                            <option>ID</option>
+                            <option>Name</option>
+                            <option>Created Time</option>
+                          </select>
+                        </span>
+                        </div>
+                        <button id="search_here" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</button>
+                    </div>
+                </form>
+                <div class="update_container">
+                    <td>
+                        <tr scope="row"><input type="text" id="create_id">ID</tr>
+                        <tr><input type="text" id="create_name">Name</tr>
+                        <tr><input type="text" id="create_time">Create Time</tr>
+                        <tr><button type="button" class="btn btn-primary create_ajax_callabck">Create New Record</button></tr>
+                    </td>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Created Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="show_search_result" class="update_container">
+
+                        <!-- add data-id data-name data-time attributes to make update easier -->
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>10.04.2017</td>
+                            <td><button type="button" class="btn btn-danger">Delete</button>
+                                </br>
+                                <button type="button" class="btn btn-success">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>10.04.2017</td>
+                            <td><button type="button" class="btn btn-danger">Delete</button>
+                                </br>
+                                <button type="button" class="btn btn-success">Edit</button>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                                        <th scope="row"><input type="text" name="" id=""></th>
+                                        <td><input type="text" name="" id=""></td>
+                                        <td><input type="text" name="" id=""></td>
+                                        <td><button type="button" class="btn btn-warning">Update</button></td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <script src="js/entry_point.js"></script>
+</body>
+
+</html>
